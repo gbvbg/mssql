@@ -70,7 +70,7 @@
     groups:
       - Domain Users
   tags: service_account
-  delegate_to: "{{ domain_controller }}"
+#  delegate_to: "{{ domain_controller }}"
 
 - name: Active Directory | Ensure SQL Agent Service account is present
   win_domain_user:
@@ -85,7 +85,7 @@
     path: "{{ mssql_base_ldap_path }}"
     groups:
       - Domain Users
-  delegate_to: "{{ domain_controller }}"
+#  delegate_to: "{{ domain_controller }}"
   tags: service_account
 
 # SQL install may fail if a pending reboot is detected
